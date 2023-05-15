@@ -37,7 +37,7 @@ Follow these steps to run the sample code:
 
 2. Please list the wallet addresses you are interested in the `inputs/wallets.csv` file.
 
-3. Build the Docker image and run the container:
+3. Build the Docker image and run the container to analysis:
 
     ```bash
     docker-compose up --build
