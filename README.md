@@ -65,11 +65,6 @@ Below is the basic directory structure for this project:
   - `process.R`: This is the main script.
 
 
-## License
-
-This app is open-source and licensed under the MIT license. For more details, check the [License file](LICENSE).
-
-
 ## Learn More
 
 To learn more about "Legos", take a look at the following resources:
@@ -78,3 +73,6 @@ To learn more about "Legos", take a look at the following resources:
 - [Resources](https://github.com/OpenDataforWeb3/Resources) - There are resources available to help you develop legos.
 
 
+## License
+
+This app is open-source and licensed under the MIT license. For more details, check the [License file](LICENSE).
