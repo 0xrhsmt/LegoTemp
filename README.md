@@ -29,21 +29,28 @@ This sample code is designed to extract wallets from the dataset that have made 
 
 Follow these steps to run the sample code:
 
-1. Unzip the `GR15_contributions.csv` file:
+1. Clone this repository:
+
+  ```bash
+  git clone https://github.com/0xrhsmt/LegoTemp.git
+  cd LegoTemp
+  ```
+
+2. Unzip the `GR15_contributions.csv` file:
 
     ```bash
     gunzip -k datasets/*.gz
     ```
 
-2. Please list the wallet addresses you are interested in the `inputs/wallets.csv` file.
+3. Please list the wallet addresses you are interested in the `inputs/wallets.csv` file.
 
-3. Build the Docker image and run the container to analyze sybils:
+4. Build the Docker image and run the container to analyze sybils:
 
     ```bash
     docker-compose up --build
     ```
 
-4. Check the results of the Sybil analysis:
+5. Check the results of the Sybil analysis:
 
     ```bash
     head outputs/wallets-latest.csv 10
