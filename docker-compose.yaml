@@ -6,4 +6,5 @@ services:
       dockerfile: build/Dockerfile
     volumes:
       - ./datasets:/usr/src/app/datasets
-      - ./results:/usr/src/app/results
+      - ./inputs:/usr/src/app/inputs
+      - ./outputs:/usr/src/app/outputs

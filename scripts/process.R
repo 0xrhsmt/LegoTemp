@@ -1,6 +1,6 @@
 # Load necessary packages
-library(dplyr)
 library(readr)
+library(dplyr)
 
 # Function to add a timestamp suffix to the file name
 add_timestamp_suffix <- function(file_name) {
@@ -9,18 +9,25 @@ add_timestamp_suffix <- function(file_name) {
   return(file_name)
 }
 
-# Read the CSV file
-data <- read_csv("datasets/GR15_contributions.csv")
+# Read CSV files
+contributions <- read_csv("datasets/GR15_contributions.csv")
+wallets <- read_csv("inputs/wallets.csv")
 
-# Extract addresses with donation amounts in USD less than or equal to 0.01
-filtered_data <- data %>%
-  filter(amount_in_usdt <= 0.01) %>%
+# Filter addresses in the contributions dataset 
+filtered_addresses <- contributions %>%
+  inner_join(wallets, by = "address") %>% 
+  filter(amount_in_usdt <= 1) %>%
+  group_by(address) %>%
+  filter(n() > 1) %>%
   distinct(address)
 
+# Add a new column 'score' to the wallets dataset
+wallets <- wallets %>%
+  mutate(score = if_else(address %in% filtered_addresses$address, 1, 0))
+
 # Generate a file name with a timestamp suffix
-file_name <- add_timestamp_suffix("results/results.csv")
+file_name <- add_timestamp_suffix("outputs/wallets.csv")
 
 # Write the filtered data to the CSV file
-write_csv(filtered_data, file_name)
-file.copy(from = file_name, to = "results/results-latest.csv")
-
+write_csv(wallets, file_name)
+file.copy(from = file_name, to = "outputs/wallets-latest.csv", overwrite = TRUE)
