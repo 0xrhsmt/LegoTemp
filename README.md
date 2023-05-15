@@ -25,7 +25,7 @@ docker-compose up --build
 
 ## Sample code
 
-This sample code is designed to extract wallets from the GR15 dataset that have made multiple donations of relatively small amounts, specifically less than or equal to 1 dollar. This analysis may be useful in identifying and defending against Sybil attacks.
+This sample code is designed to extract wallets from the dataset that have made multiple GR15 donations of relatively small amounts, specifically less than or equal to $1. This analysis can be useful in identifying and defending against Sybil attacks.
 
 Follow these steps to run the sample code:
 
