@@ -42,7 +42,7 @@ Follow these steps to run the sample code:
     gunzip -k datasets/*.gz
     ```
 
-3. Please list the wallet addresses you are interested in the `inputs/wallets.csv` file.
+3. Please list the target wallet addresses in the `inputs/wallets.csv` file.
 
 4. Build the Docker image and run the container to analyze sybils:
 
