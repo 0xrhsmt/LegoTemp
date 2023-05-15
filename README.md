@@ -19,7 +19,7 @@ You need to have them installed on your system before you can use this project.
 Only one command, but if you want to run the sample code, you will need to unzip the sample data. See the section below.
 
 ```bash
-docker-compose up -d
+docker-compose up --build
 ```
 
 
@@ -40,13 +40,13 @@ Follow these steps to run the sample code:
 3. Build the Docker image and run the container:
 
     ```bash
-    docker-compose up -d
+    docker-compose up --build
     ```
 
 4. Check the results of the Sybil analysis:
 
     ```bash
-    head outputs/outputs-latest.csv 10
+    head outputs/wallets-latest.csv 10
     ```
 
     If the `sybils` column has a value of 1, this suggests that the corresponding wallet may be a Sybil.
