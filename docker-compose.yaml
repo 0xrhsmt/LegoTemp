@@ -1,0 +1,9 @@
+version: '3'
+services:
+  my_r_script:
+    build:
+      context: .
+      dockerfile: build/Dockerfile
+    volumes:
+      - ./datasets:/usr/src/app/datasets
+      - ./results:/usr/src/app/results
