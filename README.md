@@ -1,10 +1,10 @@
-概要
+## Overview
 
 * This repository provides a template for creating "Legos".
 * "Legos" are modular, executable code units developed by Gitcoin for Sybil defense. They are derived from data insights identifying Sybil users. The aim is to enable users to build complex defense systems with these simple, composable blocks via a user-friendly web interface. For more details, please refer to [this](#https://github.com/Fraud-Detection-and-Defense/lego-docs#what-are-legos).
 * Sample code is included so you can get started right away.
 
-# Prerequisites
+## Prerequisites
 
 This project uses Docker and Docker Compose.
 You need to have them installed on your system before you can use this project.
